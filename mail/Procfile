@@ -1,1 +1,1 @@
-web: gunicorn project3:app --preload
+worker: ./bin/icka -forever
