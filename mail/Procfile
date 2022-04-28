@@ -1,1 +1,1 @@
-worker: ./bin/icka -forever
+web: gunicorn project3.wsgi --log-file -
