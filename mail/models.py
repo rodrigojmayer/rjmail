@@ -1,6 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
-# from django.core import ModelSerializer 
+# from django.core import ModelSerializer
 # from django.core import serializers
 # from rest_framework import serializers
 # from django.core import serializers as core_serializers
