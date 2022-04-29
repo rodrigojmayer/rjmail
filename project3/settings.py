@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = "05$4$3aew(8ywondz$g!k4m779pbvn9)euj0zp7-ae*x@4pxr+"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # ALLOWED_HOSTS = [".herokuapp.com",'localhost', '127.0.0.1:8000/']
 ALLOWED_HOSTS = ["*"]
@@ -52,8 +52,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# STATICFILES_STORAGE='whitenoise.django.GzipManifestStaticFilesStorage'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'project3.urls'
 
@@ -89,7 +87,7 @@ import dj_database_url
 from decouple import config
 DATABASES = {
     'default': dj_database_url.config(
-        default=config('DATABASE_URL')
+        default=config('postgres://dpacmtnvlvetjd:7da488d2c1b9a1fcebe0caf39fc3addacc677962afeb0c3cee2030a4b6c62fdc@ec2-52-5-110-35.compute-1.amazonaws.com:5432/daoak6torpr6oq')
     )
 }
 
@@ -136,12 +134,16 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = ' /static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_DIR = (
+
+STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+# STATICFILES_STORAGE='whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # MEDIA_URL = '/media/'
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
