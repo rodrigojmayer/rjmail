@@ -393,7 +393,7 @@ def login_view(request):
             login(request, user)
             return HttpResponseRedirect(reverse("index"))
         else:
-            return render(request, "mail\login.html", {
+            return render(request, "mail/login.html", {
                 "message": "Invalid email and\or password."
             })
     else:
