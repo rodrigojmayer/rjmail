@@ -397,7 +397,7 @@ def login_view(request):
                 "message": "Invalid email and\or password."
             })
     else:
-        return render(request, "mail\login.html")
+        return render(request, "mail/login.html")
 
 
 def logout_view(request):
