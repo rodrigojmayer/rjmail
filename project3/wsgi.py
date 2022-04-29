@@ -13,4 +13,8 @@ from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project3.settings')
 
-application = get_wsgi_application()
+from whitenoise import DjangoWhiteNoise
+
+# application = get_wsgi_application()
+
+application = DjangoWhiteNoise(get_wsgi_application())
