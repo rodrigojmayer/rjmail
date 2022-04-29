@@ -1,1 +1,1 @@
-web: gunicorn rjmail:app --log-file -
+web: gunicorn mail:app --log-file -
