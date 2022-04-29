@@ -1,1 +1,1 @@
-web: gunicorn rjmail.wsgi --log-file -
+web: gunicorn project3.wsgi --log-file -
