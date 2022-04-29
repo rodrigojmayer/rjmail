@@ -1,1 +1,1 @@
-web: gunicorn mail.project3.wsgi --log-file -
+web: gunicorn mail.wsgi --log-file -
