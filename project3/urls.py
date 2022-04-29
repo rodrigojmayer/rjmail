@@ -25,5 +25,5 @@ urlpatterns = [
     path('', include('mail.urls')),
     
     # path(r'^profiles/', include('profiles.urls')),
-    # path(r'^admin/', admin.site.urls),
+    path(r'^admin/', admin.site.urls),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
